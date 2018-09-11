@@ -2,7 +2,7 @@ version : '3'
 
 services:
  idoit:
-  image: i-doit
+  build: .
   ports:
    - 80:80
   volumes:
