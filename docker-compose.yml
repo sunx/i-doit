@@ -1,0 +1,29 @@
+version : '3'
+
+services:
+ idoit:
+  image: i-doit
+  ports:
+   - 80:80
+  volumes:
+   - ./data:/var/www/html/i-doit
+   - ./i-doit.ini:/etc/php.d/i-doit.ini
+   - ./i-doit.conf:/etc/httpd/conf.d/i-doit.conf
+  restart: always
+  networks:
+   - idoit-network
+
+ mysql:
+  image: mariadb:10.1
+  restart: always
+  volumes:
+   - ./db:/var/lib/mysql
+   - ./99-i-doit.cnf:/etc/mysql/conf.d/99-i-doit.cnf
+  environment:
+   - MYSQL_ROOT_PASSWORD=ChangeMe
+  networks:
+   - idoit-network
+
+networks:
+   idoit-network:
+     driver: bridge
