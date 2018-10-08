@@ -1,6 +1,8 @@
 # IT Documentation Software i-doit
 Containerized version
 
+Docker Hub https://hub.docker.com/r/sunxe/i-doit/
+
 Last version 1.11.1
 ## Installation
 
