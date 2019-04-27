@@ -3,7 +3,7 @@ Containerized version
 
 Docker Hub https://hub.docker.com/r/sunxe/i-doit/
 
-Last version 1.11.1
+Last version 1.12.2
 ## Installation
 
 `git clone https://github.com/sunx/i-doit`

@@ -1,5 +1,5 @@
 FROM centos:7
-ENV ver 1.11.1
+ENV ver 1.12.2
 RUN yum update -y && yum install -y httpd unzip zip wget moreutils epel-release
 RUn yum install -y https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 COPY mariadb.repo /etc/yum.repos.d/
